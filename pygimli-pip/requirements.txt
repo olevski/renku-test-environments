@@ -1,0 +1,2 @@
+pygimli=1.4.4
+ipywidgets
