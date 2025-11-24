@@ -1,2 +1,2 @@
-pygimli=1.4.4
+pygimli>=1.5.0
 ipywidgets
