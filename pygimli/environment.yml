@@ -1,0 +1,25 @@
+name: "base"
+channels:
+  - conda-forge
+  - gimli
+  - nodefaults
+dependencies:
+  - postgresql
+  - nodejs>=12.0.0
+  - pygimli>=1.5.0
+  - dash
+  - plotly
+  - pandas
+  - openpyxl
+  - seaborn
+  - psycopg2
+  - pyproj
+  - matplotlib==3.7.0
+  - jupyterlab>=4,<5
+  - jupyter-server-proxy
+  - werkzeug==2.2.1
+  - itsdangerous
+  - werkzeug
+  - gunicorn
+  - ipywidgets
+prefix: "/opt/conda"
