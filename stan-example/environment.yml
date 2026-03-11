@@ -6,7 +6,7 @@ dependencies:
   - python=3.8
   - pandas
   - numpy
-  - sympy=1.3
+  - sympy=1.4
   - scipy
   - matplotlib
   - pip
