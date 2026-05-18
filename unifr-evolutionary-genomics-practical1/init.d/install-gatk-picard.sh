@@ -32,3 +32,9 @@ echo >>~/.bashrc
 printf 'PIPX_BIN_DIR=%s' "$PIPX_BIN_DIR" >>~/.bashrc
 echo >>~/.bashrc
 pipx install multiqc==1.33
+
+QUARTO_VERSION="1.9.37"
+QUARTO_INSTALL_DIR="${PERSISTENT_DIR}/quarto-${QUARTO_VERSION}"
+curl -fsSL "https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.tar.gz" | tar -xz -C "$PERSISTENT_DIR"
+printf 'export PATH="%s:$PATH"' "${QUARTO_INSTALL_DIR}/bin" >>~/.bashrc
+echo >>~/.bashrc
