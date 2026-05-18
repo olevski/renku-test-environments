@@ -8,7 +8,6 @@ GATK_INSTALL_DIR="${PERSISTENT_DIR}/gatk-${GATK_VERSION}"
 PICARD_INSTALL_DIR="${PERSISTENT_DIR}/picard"
 
 mkdir -p "$PICARD_INSTALL_DIR"
-mkdir -p "$GATK_INSTALL_DIR"
 curl -fsSL -o /tmp/gatk.zip https://github.com/broadinstitute/gatk/releases/download/${GATK_VERSION}/gatk-${GATK_VERSION}.zip
 unzip -q /tmp/gatk.zip -d "$PERSISTENT_DIR"
 rm -f /tmp/gatk.zip
