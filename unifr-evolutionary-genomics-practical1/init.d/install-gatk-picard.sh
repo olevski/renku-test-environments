@@ -23,4 +23,8 @@ echo >> ~/.bashrc
 printf 'export PATH="%s:%s:$PATH"' "${GATK_INSTALL_DIR}" "${PICARD_INSTALL_DIR}" >> ~/.bashrc
 echo >> ~/.bashrc
 
-# pipx install multiqc==1.33
+PIPX_HOME="${PERSISTENT_DIR}/pipx"
+PIPX_BIN_DIR="${PERSISTENT_DIR}/pipx_bin"
+mkdir -p "$PIPX_HOME" "$PIPX_BIN_DIR"
+print 'export PATH="%s:$PATH"' "${PIPX_BIN_DIR}" >> ~/.bashrc
+pipx install multiqc==1.33
