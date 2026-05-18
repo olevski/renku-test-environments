@@ -16,7 +16,8 @@ curl -fsSL -o "${PICARD_INSTALL_DIR}/picard.jar" https://github.com/broadinstitu
 printf '%s\n' '#!/usr/bin/env bash' 'exec java -jar /opt/picard/picard.jar "$@"' > "${PICARD_INSTALL_DIR}/picard"
 chmod +x "${PICARD_INSTALL_DIR}/picard"
 
-echo "\n" > ~/.bashrc
-printf 'export PATH="%s:%s:$PATH"\n' "${GATK_INSTALL_DIR}" "${PICARD_INSTALL_DIR}" >> ~/.bashrc
+echo >> ~/.bashrc
+printf 'export PATH="%s:%s:$PATH"' "${GATK_INSTALL_DIR}" "${PICARD_INSTALL_DIR}" >> ~/.bashrc
+echo >> ~/.bashrc
 
 # pipx install multiqc==1.33
