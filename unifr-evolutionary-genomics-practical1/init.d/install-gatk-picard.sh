@@ -11,9 +11,13 @@ mkdir -p "$PICARD_INSTALL_DIR"
 mkdir -p "$GATK_INSTALL_DIR"
 curl -fsSL -o /tmp/gatk.zip https://github.com/broadinstitute/gatk/releases/download/${GATK_VERSION}/gatk-${GATK_VERSION}.zip
 unzip -q /tmp/gatk.zip -d "$GATK_INSTALL_DIR"
+cp -r "${GATK_INSTALL_DIR}/gatk-${GATK_VERSION}/*" "$GATK_INSTALL_DIR"
 rm -f /tmp/gatk.zip
 curl -fsSL -o "${PICARD_INSTALL_DIR}/picard.jar" https://github.com/broadinstitute/picard/releases/download/${PICARD_VERSION}/picard.jar
-printf '%s\n' '#!/usr/bin/env bash' 'exec java -jar /opt/picard/picard.jar "$@"' > "${PICARD_INSTALL_DIR}/picard"
+cat > "${PICARD_INSTALL_DIR}/picard" << EOF
+#!/usr/bin/env bash
+exec java -jar ${PICARD_INSTALL_DIR}/picard.jar "\$@"
+EOF
 chmod +x "${PICARD_INSTALL_DIR}/picard"
 
 echo >> ~/.bashrc
