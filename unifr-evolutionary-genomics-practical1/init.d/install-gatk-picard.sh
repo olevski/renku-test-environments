@@ -19,4 +19,4 @@ chmod +x "${PICARD_INSTALL_DIR}/picard"
 echo "\n" > ~/.bashrc
 printf 'export PATH="%s:%s:$PATH"\n' "${GATK_INSTALL_DIR}" "${PICARD_INSTALL_DIR}" >> ~/.bashrc
 
-pipx install multiqc==1.33
+# pipx install multiqc==1.33
