@@ -8,7 +8,7 @@ dependencies:
   - pip=26.0.1
 
   # Workflow
-  - mamba=2.1.0
+  - mamba
   - snakemake=9.16.2
   - snakemake-minimal=9.16.2
   - snakemake-wrapper-utils=0.8.0
