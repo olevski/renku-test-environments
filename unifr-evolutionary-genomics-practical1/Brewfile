@@ -1,0 +1,3 @@
+cask "quarto"
+brew "pixi"
+brew "pipx"
