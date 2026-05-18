@@ -41,6 +41,7 @@ dependencies:
   - qualimap=2.3
   - degenotate=1.3
   
+  - pipx
 
   # R
   - r-base=4.3.1
