@@ -9,7 +9,6 @@ dependencies:
   - r-BiocManager=1.30.27
   - r-rmarkdown=2.31.0
   - r-knitr=1.51.0
-  - r-quarto=1.5.1
   - r-shiny=1.13.0
   - r-devtools=2.5.2
   - r-jsonlite=2.0.0
